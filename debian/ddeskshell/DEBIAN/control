@@ -1,0 +1,11 @@
+Package: ddeskshell
+Version: 0.1-1
+Architecture: amd64
+Maintainer: Dima <wiha77@gmail.com>
+Installed-Size: 856
+Depends: libc6 (>= 2.7), libconfig9, libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.30.0), libgtk-3-0 (>= 3.3.16), libmm-glib0 (>= 0.7.991), libnm-glib4 (>= 0.9.8.4)
+Section: unknown
+Priority: optional
+Homepage: <insert the upstream URL, if relevant>
+Description: ddesk shell launcher
+ Start screen,special launcer for DDESK

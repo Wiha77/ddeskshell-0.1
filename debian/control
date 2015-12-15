@@ -1,0 +1,15 @@
+Source: ddeskshell
+Section: unknown
+Priority: optional
+Maintainer: Dima <wiha77@gmail.com>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev
+Standards-Version: 3.9.4
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Git: git://git.debian.org/collab-maint/ddeskshell.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/ddeskshell.git;a=summary
+
+Package: ddeskshell
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ddesk shell launcher
+ Start screen,special launcer for DDESK
