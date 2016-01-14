@@ -1,4 +1,4 @@
-3aec07b8a49918622b6148501ca6307e  usr/bin/ddeskshell
+32123c54935508e0df79aa70086a0a64  usr/bin/ddeskshell
 dbab20732607c069a8828748850c1876  usr/share/ddeskshell/3g_0_icone_any.png
 20ef30a69ea18c56a90d925dcd074d4a  usr/share/ddeskshell/3g_1_icone_any.png
 012fe61d7d87af51bb0388a48a38463b  usr/share/ddeskshell/3g_2_icone_any.png
@@ -18,7 +18,7 @@ b91466d96db8db5100d32f71ac3216b6  usr/share/ddeskshell/bat_charge_0_icone_any.pn
 80b4d0b57032208fefd7d67c2d6c736b  usr/share/ddeskshell/bat_charge_3_icone_any.png
 c3199b2cc0350da1da226c155ac9abab  usr/share/ddeskshell/bat_charge_4_icone_any.png
 ccdb4bac32a6e814f73165ac9e668f97  usr/share/ddeskshell/bat_charge_5_icone_any.png
-ccbb40971c27f6e4af2c31d3b517e2ef  usr/share/ddeskshell/ddesk_shell.cfg
+c7fed58f1c22e862576b1a65dae668be  usr/share/ddeskshell/ddesk_shell.cfg
 02ca472d7800463081f41f2ca5a7994a  usr/share/ddeskshell/firefox_icone_any.png
 cbae32a245855a828ea090a151496889  usr/share/ddeskshell/flags/16/Abkhazia.png
 5f3cddea1db254301a533f5790db704f  usr/share/ddeskshell/flags/16/Afghanistan.png
@@ -1060,7 +1060,6 @@ b5145776a1ac0e7e16bb5021715873da  usr/share/ddeskshell/flags/64/Western-Sahara.p
 be3f86bf699fea66511233961be8b075  usr/share/ddeskshell/flags/64/Yemen.png
 ce9f94dce5178537fb75535f3c21d5b8  usr/share/ddeskshell/flags/64/Zambia.png
 65ec877241eeb2e5bd0dcf2e048b58af  usr/share/ddeskshell/flags/64/Zimbabwe.png
-da68327babf6cfc2a4f563ea6f1edf8d  usr/share/ddeskshell/locale.cfg
 63f5cb2970a7c7513ca3748633c0da01  usr/share/ddeskshell/no_wireless_icone_any.png
 867e75c6e8b7248dfa01b86e415c79c5  usr/share/ddeskshell/setting_icone_any.png
 9a4614fe45dbcbc245801d95e7845b34  usr/share/ddeskshell/wifi_0_icone_any.png

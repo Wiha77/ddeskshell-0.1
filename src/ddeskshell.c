@@ -6,6 +6,8 @@ void load_cfg(void);
 void refresh_main_form(void);
 App_data app={0};
 int set_any_screen;
+int pid_settings=NULL;
+
 
 //gtk
 GtkWidget *window = NULL;
@@ -40,7 +42,32 @@ exit(2);
 
 void but_setup_callback(void)
 {
-system(app.setup_command);
+
+	int status;
+	pid_t result=-1;
+
+	if (pid_settings){
+		result = waitpid(pid_settings, &status, WNOHANG);
+
+	if (result == 0) return;
+
+	}
+/*
+	//if (pid_settings) return;
+struct stat fileStat;
+char path_buf[20];
+int strez=0;
+if (pid_settings){
+	sprintf(path_buf, "%s%d","/proc/",pid_settings);
+	strez=stat(path_buf,&fileStat);
+    }
+if((pid_settings) && (strez>=0))return; */
+pid_settings = fork();
+if(!pid_settings)
+	{execl(app.setup_command,NULL);  //("/usr/bin/unity-control-center",NULL);
+	exit(0);
+	}
+
 }
 //--------------------------------------------------------------------------------------------------------------------
 
