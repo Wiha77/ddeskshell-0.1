@@ -568,9 +568,16 @@ void create_main_window(void) {
 
 	// главное окно
 	window = gtk_window_new(GTK_WINDOW_TOPLEVEL); // Главное окно создаем;  GTK_WINDOW_TOPLEVEL GTK_WINDOW_POPUP
+	gtk_window_set_type_hint (GTK_WINDOW(window),
+			GDK_WINDOW_TYPE_HINT_DESKTOP);
 	gtk_window_set_modal(GTK_WINDOW(window), TRUE);
 	gtk_window_set_hide_titlebar_when_maximized(GTK_WINDOW(window), TRUE);
+
+
+
+
 	gtk_window_fullscreen(GTK_WINDOW(window));
+
 
 	//will get dispay size
 	app.window_width = gdk_screen_get_width(
@@ -628,10 +635,10 @@ void create_main_form(void) {
 		strncat(backgroun_path, "/", 1);
 		strncat(backgroun_path, app.background_file, 510);
 	//printf("background_file : %s\n \n",app.background_file);
-	//printf("path_background_file2 : %s\n \n",backgroun_path);
+	//printf("path_background_file2 : %s\n \n",backgroun_path);round
 		sprintf(str, " GtkWindow {\n"
 				"   background-image: url('%s');\n"
-				"   background-repeat:round;\n"
+				"   background-repeat: space;\n"
 				"}\n\n"
 				" GtkButton {\n"
 				" border-image: none;\n"
@@ -643,6 +650,13 @@ void create_main_form(void) {
 
 		g_object_unref(provider);
 		/*----------------------------------------------------------------------------------------------------------------------*/
+
+//		GtkWidget *image_back=gtk_image_new_from_file(backgroun_path);
+		GdkPixbuf *pix_back_temp=gdk_pixbuf_new_from_file (backgroun_path,&error);
+		GdkPixbuf *pix_back=gdk_pixbuf_scale_simple (pix_back_temp,app.window_width,app.window_hight,GDK_INTERP_BILINEAR);
+		GtkWidget *image_back=gtk_image_new_from_pixbuf (pix_back);
+		/*----------------------------------------------------------------------------------------------------------------------*/
+ 	 gtk_fixed_put(GTK_FIXED(mainbox), image_back, 0, 0);
 		but_setup = gtk_button_new ();
 		but_firefox = gtk_button_new ();
 
