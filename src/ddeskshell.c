@@ -36,7 +36,18 @@ char locale_buf[2]="en";
 void but_firefox_callback(void)
 {
 //	system("xterm");
-exit(2);
+	int status;
+	pid_t result=-1;
+
+	if (pid_settings){
+		result = waitpid(pid_settings, &status, WNOHANG);
+
+	if (result == 0) return;
+
+	}
+	exit(2);
+
+
 }
 //--------------------------------------------------------------------------------------------------------------------
 
@@ -636,9 +647,10 @@ void create_main_form(void) {
 		strncat(backgroun_path, app.background_file, 510);
 	//printf("background_file : %s\n \n",app.background_file);
 	//printf("path_background_file2 : %s\n \n",backgroun_path);round
+//		"   background-image: url('%s');\n"
+//		"   background-repeat: space;\n"
 		sprintf(str, " GtkWindow {\n"
-				"   background-image: url('%s');\n"
-				"   background-repeat: space;\n"
+
 				"}\n\n"
 				" GtkButton {\n"
 				" border-image: none;\n"
